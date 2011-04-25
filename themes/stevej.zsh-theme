@@ -9,16 +9,12 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 function host_prompt {
-  HOSTNAME=`hostname`
-  if [ $HOSTNAME = "lambda" ] ; then
-    echo 'λ' && return
-  elif [ $HOSTNAME = "beta" ] ; then
-    echo 'β' && return
-  elif [ $HOSTNAME = "eta" ] ; then
-    echo 'η' && return
-  else
-    echo $HOSTNAME && return
-  fi
+  case `hostname` in
+    "lambda" ) echo 'λ';;
+    "eta"    ) echo 'β';;
+    "beta"   ) echo 'β';;
+    *        ) echo `hostname`;;
+  esac
 }
 
 function prompt_char {

@@ -9,7 +9,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 function host_prompt {
-  case `hostname` in
+  case `hostname -s` in
     "lambda" ) echo 'λ';;
     "eta"    ) echo 'η';;
     "beta"   ) echo 'β';;

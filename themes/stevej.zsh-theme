@@ -11,7 +11,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 function host_prompt {
   case `hostname` in
     "lambda" ) echo 'λ';;
-    "eta"    ) echo 'β';;
+    "eta"    ) echo 'η';;
     "beta"   ) echo 'β';;
     *        ) echo `hostname`;;
   esac
